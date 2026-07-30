@@ -14,6 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class securityConfig {
 
+
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((requests) -> requests.requestMatchers("/securedPage").authenticated()
@@ -24,15 +25,16 @@ public class securityConfig {
         return http.build();
     }
 
-    @Bean
-    ClientRegistrationRepository clientRegistrationRepository() {
-        ClientRegistration googleRegistration=getGitHubClientRegistration();
-        return new InMemoryClientRegistrationRepository(googleRegistration);
-    }
-
-    @Bean
-    ClientRegistration getGitHubClientRegistration() {
-        return CommonOAuth2Provider.GITHUB.getBuilder("github").clientId("Ov23liGKSXIp66AUZ2WJ").clientSecret("93e93dc3f3ee866385695e864d161f4fe5f4d409").build();
-    }
+    //NOW WE HAVE REPLACED WITH YAML COnfigurations
+//    @Bean
+//    ClientRegistrationRepository clientRegistrationRepository() {
+//        ClientRegistration googleRegistration=getGitHubClientRegistration();
+//        return new InMemoryClientRegistrationRepository(googleRegistration);
+//    }
+//
+//    @Bean
+//    ClientRegistration getGitHubClientRegistration() {
+//        return CommonOAuth2Provider.GITHUB.getBuilder("github").clientId("Ov23liGKSXIp66AUZ2WJ").clientSecret("93e93dc3f3ee866385695e864d161f4fe5f4d409").build();
+//    }
 
 }

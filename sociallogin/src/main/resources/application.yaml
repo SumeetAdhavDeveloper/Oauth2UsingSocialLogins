@@ -6,3 +6,9 @@ spring:
     user:
       name: sumeet
       password: 1234
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${GITHUNB_CLINET_ID:Ov23liGKSXIp66AUZ2WJ}
+            client-secret: ${GITHUNB_CLINET_SECRET:93e93dc3f3ee866385695e864d161f4fe5f4d409}

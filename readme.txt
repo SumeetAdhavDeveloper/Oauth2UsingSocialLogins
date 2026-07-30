@@ -21,3 +21,5 @@ This is an in-memory implementation of ClientRegistrationRepository.
 It stores client registration details in memory rather than in a database or external system.
 Typically, you pass one or more ClientRegistration objects into its constructor so that Spring Security knows
 which OAuth2 providers are available for login.
+
+We can use yaml based configurations to directly replace the securityConfig class by yaml configs
